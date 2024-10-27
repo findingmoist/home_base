@@ -2,10 +2,10 @@ Connects to the network specified in the config whenever it is within range by p
 
 ## config.toml
 ```
-main.plugins.home_base.enabled = false
+main.plugins.home_base.enabled = true
 main.plugins.home_base.ssid = 'your_home_network'
 main.plugins.home_base.password = 'your_home_network_password'
-main.plugins.home_base.minimum_signal_strength= -75
+main.plugins.home_base.minimum_signal_strength= -80
 ```
 
 ## Updates
