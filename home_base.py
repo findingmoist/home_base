@@ -1,7 +1,7 @@
 # home-base watches for a pre-defined home network to be in range, then pauses pwning to
 # allow for internet connectivity tasks to be carried out. Once out of range, pwning is resumed
 # Inspiration and some methodologies taken from @nagy_craig's "Educational-purposes-only" plugin
-# Install dependencies: apt update; apt install nmap macchanger
+
 import pwnagotchi.plugins as plugins
 import pwnagotchi
 import logging
