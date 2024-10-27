@@ -52,7 +52,7 @@ class HomeBase(plugins.Plugin):
             ui.set('face', '(◕‿‿◕)')
             ui.set('face', '(ᵔ◡◡ᵔ)')
             ui.set('status', 'Found home network at %s ...' % self.network)
-        while self.status == 'switching_mon_off':
+        while self.status == 'switching_wlan0mon_off':
             ui.set('face', '(◕‿‿◕)')
             ui.set('face', '(ᵔ◡◡ᵔ)')
             ui.set('status', 'We\'re home! Pausing monitor mode ...')
@@ -81,7 +81,7 @@ def _run(cmd):
 def _connect_to_target_network(self, agent, network_name, channel):
     self.network = network_name
     _log('sending command to Bettercap to stop using wlan0mon...')
-    self.status = 'switching_mon_off'
+    self.status = 'switching_wlan0mon_off'
     agent.run('wifi.recon off')
     _log('ensuring all wpa_supplicant processes are terminated...')
     subprocess.run('systemctl stop wpa_supplicant; killall wpa_supplicant', shell=True, stdin=None, stdout=open("/dev/null", "w"), stderr=None, executable="/bin/bash")
