@@ -5,4 +5,6 @@ Connects to the network specified in the config whenever it is within range by p
 apt update; apt install nmap macchanger
 ```
 
-## Updated to work with wlan0mon
+## Updates
+Made work with jayofelenys 64bit. 32bit untested
+
